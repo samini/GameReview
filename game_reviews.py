@@ -25,4 +25,6 @@ if __name__ == "__main__":
     print_games(games)
   re = ReviewEndpoint(options.api_key, v)
   for game in games:
-    print(re.get_review(game))
+    print('\n%s' % game)
+    review = re.get_review(game)
+    print review
